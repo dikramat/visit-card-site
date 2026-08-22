@@ -1,0 +1,125 @@
+:root {
+  color-scheme: light;
+  --font-sans: "DM Sans", "Segoe UI", sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --radius: 6px;
+  --max: 68rem;
+  --header-h: 5.25rem;
+  --bg: #f6f3ed;
+  --bg-elevated: #fbf9f4;
+  --text: #26352a;
+  --text-muted: #5d6258;
+  --border: #dddcd3;
+  --accent: #496244;
+  --accent-soft: #e5eadf;
+  --accent-text: #faf9f2;
+  --shadow: 0 16px 40px rgb(38 53 42 / 0.08);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #121418;
+  --bg-elevated: #1a1d24;
+  --text: #f4f4f5;
+  --text-muted: #a1a1aa;
+  --border: #2a2e38;
+  --accent: #809873;
+  --accent-soft: #354638;
+  --accent-text: #172019;
+  --shadow: 0 16px 40px rgb(0 0 0 / 0.35);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f1ea;
+  --bg-elevated: #fffcf7;
+  --text: #1c1917;
+  --text-muted: #57534e;
+  --border: #e7e0d5;
+  --accent: #496244;
+  --accent-soft: #e5eadf;
+  --accent-text: #faf9f2;
+  --shadow: 0 16px 40px rgb(28 25 23 / 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  font: 16px/1.55 var(--font-sans);
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (max-width: 479px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  max-width: 12ch;
+  font-family: var(--font-serif);
+  font-size: clamp(2.75rem, 7vw, 5.1rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.98;
+}
+
+h2 {
+  font-size: 0.8rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
