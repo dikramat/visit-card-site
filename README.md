@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 # visit-card-site
-=======
-
 
 Personal visiting card website for psychologist Dariya Kravtsova.
 
@@ -13,4 +10,3 @@ npm run dev
 ```
 
 Create a production build with `npm run build`.
-
