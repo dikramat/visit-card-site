@@ -708,6 +708,34 @@ main {
 }
 
 @media (max-width: 479px) {
+  .site-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    row-gap: 0.65rem;
+  }
+
+  .site-header__brand {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  .site-header__controls {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    flex-shrink: 0;
+  }
+
+  .site-header__nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.35rem;
+  }
+
   .site-header__brand {
     font-size: 0.95rem;
   }
